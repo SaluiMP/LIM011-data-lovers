@@ -17,6 +17,8 @@ header {
   box-shadow:1px 1px 5px #000; /* Sombreado */
   z-index: 2;
   position: fixed;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .cajaLogo {
@@ -25,9 +27,13 @@ header {
   left: 70px;
   top: 0px;
   width:15%;
+  display: flex;
+
+  
 }
 
 img {
+ display: flex;
   position: relative;
   left: 0px;
   top: 5px;
@@ -80,6 +86,7 @@ ul, li {
 }
 /* Banner */
 .banner{
+  display: flex;
   width: 100%;
   padding-top: 230px; /* Espaciado después de banner*/
   height: 300px;
@@ -128,26 +135,40 @@ ul, li {
   padding: 70px
 }
 
-/* Lista de pokémones */
+/* Lista de pokémones 
 .pokemonConteiner{
+ 
   width: 1000px;
   align-items: center;
   margin: 0 auto;
   top: 100px;
 
 }
+*/
+
+.pokemonConteiner{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
 
 .cajaPersonaje{
+  
   display: inline-block;
   margin:40px 40px 40px 40px;
   border-radius: 30px;
   width: 240px;
   height: 240px;
   right: 50px;
+  
+
 
 }
 
 .estiloImg {
+ 
   top: 70px;
   left:67px;
   position: absolute;
@@ -218,6 +239,8 @@ ul, li {
 }
 
 footer{
+  display: flex;
+
 	background: #1D2748;
 	width: 100%;
 	height: 38px;
@@ -228,16 +251,91 @@ footer{
   justify-content: center;
   color: white;
   font: 15px 'Quicksand';
-
+  flex-wrap: wrap;
 }
 
 /* Responsive */
 @media only screen and (max-width: 375px) {
-  .pokemonConteiner{
+  .pokemonConteiner {
     width: 80%;
   }
 
-  .cajaPersonaje{
-    width:100%;
+}
+
+@media only screen and (max-width: 375px) {
+ .label {
+    display: block;
+    cursor: pointer;
   }
-};
+}
+
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+
+.banner{
+  display: flex;
+  width: 100%;
+  padding-top: 230px; /* Espaciado después de banner*/
+  height: 300px;
+  background: url("img/fondo.png");
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+  background-size: 100% 400px;
+  z-index: 1;
+}
+
+.banner_caja {
+  position: absolute;
+  width: 70%;
+  height: 300px;
+  left: 200px;
+  top: 145px;
+  text-align: center;
+  font: 30px 'Quicksand';
+  background: rgba(29, 39, 72, 0.8);
+  border-radius: 10px;
+  color: white;
+  z-index:1;
+}
+
+.banner_caja p{
+  margin: 10px;
+  padding:60px
+}
+
+.banner_cuadro_amarillo {
+  position: absolute;
+  width: 613px;
+  height: 45px;
+  left: 170px;
+  top: 280px;
+  background: #FFCC08;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  text-align: center;
+  font: 20px 'Quicksand';
+  color: #1D2748;
+}
+
+.banner_cuadro_amarillo p{
+  margin: -60px;
+  padding: 70px
+}
+
+.cajaLogo {
+  position: absolute;
+  height: 80px;
+  left: 70px;
+  top: 0px;
+  width:15%;
+  display: flex;
+}
+
+img {
+ display: flex;
+  position: relative;
+  left: 0px;
+  top: 5px;
+}
+
+}

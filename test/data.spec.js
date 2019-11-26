@@ -1,13 +1,8 @@
 // importamos la función `example`
-import { example } from "../src/data";
+import { filtraTipo } from '../src/data.js';
 
-describe('example', () => {
-
+describe('filtrar por tipo', () => {
   it('debería ser una función', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  describe('example', () => {
-    // escribe aquí tu test
+    expect(typeof filtraTipo).toBe('function');
   });
 });

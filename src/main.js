@@ -16,7 +16,7 @@ const mostrarLista = (array) => {
   for (let i = 0; i < array.length; i += 1) {
     infoPokemon += `<div class = "cajaPersonaje">
                         <div class = "flip-conteiner">
-                            <img class="estiloImg" id="myImg" src='${array[i].img}'> 
+                            <img class="estiloImg" id="myImg" src='${array[i].img}'>
                             <div class="front">
                                 <div class="back">
                                   <p>Tipo: ${array[i].type}</p>
@@ -60,7 +60,7 @@ const mostrarLista = (array) => {
                         </div>
                     </div>
                     <p class= "estiloName" id="myName">${array[i].name}</p>
-                    <p class= "estiloNum" id="myNum">${array[i].num}</p> 
+                    <p class= "estiloNum" id="myNum">${array[i].num}</p>
                 </div>`;
   }
 
