@@ -1,4 +1,3 @@
-
 *{
   margin: 0;
   padding: 0;
@@ -16,6 +15,7 @@ header {
   background: linear-gradient(180deg, #EEA3E2 0%, #6EA3CA 106.52%);
   box-shadow:1px 1px 5px #000; /* Sombreado */
   z-index: 2;
+  position: fixed;
 }
 
 .cajaLogo {
@@ -30,57 +30,37 @@ header {
 }
 
 img {
- display: flex;
+  display: flex;
   position: relative;
-  left: 0px;
-  top: 5px;
+  left: 70px;
+  top: 10px;
 }
 
 #header1 {
-  position: relative;
-  margin: auto;
-  top: 30px;
-  left: 350px;
-  width: 700px;
-  font: 18px 'Quicksand';
+    position: relative;
+    left: 315px;
+    width: 1180px;
+    height: 100px;
+    margin: 0 auto;
 }
 
-ul, li {
-  list-style: none;
-}
-
-.nav li {
-  background-color:#3863AC;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: flex;
-}
-
-.nav > li {
-  float: left;
-  border-radius: 5px;
-  margin-right:40px;
-  width: 100px;
-  height: 25px;
-  text-align: center;
-}
-
-.nav li:hover{
-  color:#FFCC08;
-  background: #1D2748;
-}
 
  #tipo, #debilidad, .ordenar {
-  border-radius: 5px;
-  color: white;
-  background-color:#3863AC;
-  width: 100px;
-  height: 45px;
-  font: 18px 'Quicksand';
-  text-align: center;
+  border-radius: 6px;
+    color: white;
+    background-color: #3863AC;
+    width: 170px;
+    height: 40px;
+    font: 18px 'Quicksand';
+    margin: 40px;
+    position: relative;
+    left: 140px;
+  }
+  #btn-menu {
+  display: none;
+  }
   
-}
+
 /* Banner */
 .banner{
   display: flex;
@@ -274,5 +254,49 @@ footer{
   .texto_caja_amarillo{
     font-size: .8em;
     line-height: 1;
+  }
+
+  .cajaLogo {
+    margin: 0 auto;
+    height: 90px;
+    width: 60%;
+    display: flex 
+  }
+  
+  img {
+    left: -10px;
+    display: flex;
+    margin: 0 auto;
+   top: 6px;
+  }
+
+  header label {
+    display: block;
+  }
+
+  #header1 {
+    position: absolute;
+    left: 315px; /*pending*/
+    width: 100%;
+    height: 100px;
+    margin-top: -100%;
+    transition: all 500ms ease;
+}
+
+ #tipo, #debilidad, .ordenar {
+  border-radius: 6px;
+    color: white;
+    background-color: #3863AC;
+    width: 170px;
+    height: 40px;
+    font: 18px 'Quicksand';
+    margin: 40px;
+    position: relative;
+    left: 140px;
+    flex-direction: column;
+    border-top: 1px solid #ffffff ;
+  }
+  #btn-menu:checked ~  #header1 {
+     margin: 0;
   }
 }
